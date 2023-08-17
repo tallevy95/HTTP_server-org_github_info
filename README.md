@@ -19,10 +19,13 @@ Description:
 
 Installation:
 	
-	1. Clone the repository: `git clone https://github.com/tallevy95/project-name.git`
-	2. Install dependencies: `pip install -r requirements.txt`
-	3. Run the project: `python approach_i.py  <Organization> <Phrase>` for i= 1,2
-	<Organization> is a must; <Phrase> is an option (has to be in length 3 or more)
+	1. Clone the repository: `git clone https://github.com/tallevy95/HTTP_server-organization_github_info.git`
+	
+ 	2. Install dependencies: `pip install -r requirements.txt`
+	
+ 	3. Run the project: `python approach_i.py  <Organization> <Phrase>` for i= 1,2
+	
+ 	<Organization> is a must; <Phrase> is an option (has to be in length 3 or more)
 
 Usage:
 	
