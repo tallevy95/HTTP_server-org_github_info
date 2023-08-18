@@ -7,14 +7,14 @@ Junior SW Engineer - Home Assignment
 
 Description:
 	
-	- approach_1.py will generate a data.csv file that contains the wanted information (more on that later).
-	- approach_2.py will generate a HTTP server using Flask that contains the wanted information (more on that later).
+	- approach_1.py will generate a data.csv file containing the requested information (more on this later).
+	- approach_2.py will generate a HTTP server using Flask that contains the requested information (more on this later).
 
-	The wanted information:
+	The requested information:
 	- Name
 	- Owner
 	- URL
-	- Creation Time
+	- Creation time
 	- Number of stars
 
 Installation:
@@ -25,11 +25,11 @@ Installation:
 	4. Run the project: python approach_<Number>.py  <Organization> <Phrase>
 	   * <Number> can be 1 or 2
 	   * <Organization> is a must 
-	   * <Phrase> default value is None (has to be in length 3 or more)
+	   * <Phrase> default value is None (must be length 3 or more)
 
 Usage:
 	
 	To use this project, follow these steps:
-		1. run the selected approach as mention above.
-		2-a. for approach_1: open the csv file in the directory of the program.
-		2-b. for approach_2: open the given url from the CMD, http://127.0.0.1:5000
+		1. Run the selected approach as explained above.
+		2a. For approach_1: open the csv file in the program directory.
+		2b. For approach_2: Copy and paste the URL from the CMD, http://127.0.0.1:5000
