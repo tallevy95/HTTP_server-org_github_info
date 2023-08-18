@@ -19,19 +19,17 @@ Description:
 
 Installation:
 	
-	1. Clone the repository: `git clone https://github.com/tallevy95/HTTP_server-organization_github_info.git`
-	
- 	2. Install dependencies: `pip install -r requirements.txt`
-	
- 	3. Run the project: `python approach_i.py  <Organization> <Phrase>` for i= 1,2
-	
- 	<Organization> is a must; <Phrase> is an option (has to be in length 3 or more)
+	1. Clone the repository: git clone https://github.com/tallevy95/HTTP_server-organization_github_info.git
+	2. Change the directory: cd HTTP_server-organization_github_info
+	3. Install dependencies: pip install -r requirements.txt
+	4. Run the project: python approach_<Number>.py  <Organization> <Phrase>
+	   * <Number> can be 1 or 2
+	   * <Organization> is a must 
+	   * <Phrase> default value is None (has to be in length 3 or more)
 
 Usage:
 	
 	To use this project, follow these steps:
 		1. run the selected approach as mention above.
-		for approach_1:
-		2. open the csv file in the directory of the program.
-		for approach_2:
-		3. open the given url from the terminal, for example: http://127.0.0.1:5000
+		2-a. for approach_1: open the csv file in the directory of the program.
+		2-b. for approach_2: open the given url from the CMD, http://127.0.0.1:5000
