@@ -25,7 +25,7 @@ Installation:
 	4. Run the project: python approach_<Number>.py  <Organization> <Phrase>
 	   * <Number> can be 1 or 2
 	   * <Organization> is a must 
-	   * <Phrase> default value is None (must be length 3 or more)
+	   * <Phrase> optional - default value is None (must be length 3 or more)
 
 Usage:
 	
