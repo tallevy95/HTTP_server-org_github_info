@@ -24,7 +24,7 @@ Installation:
 	3. Install dependencies: pip install -r requirements.txt
 	4. Run the project: python approach_<Number>.py  <Organization> <Phrase>
 	   * <Number> can be 1 or 2
-	   * <Organization> is a must 
+	   * <Organization> is a must (i.e: gofireflyio, aws, microsoft, etc.)
 	   * <Phrase> optional - default value is None (must be length 3 or more)
 
 Usage:
