@@ -14,7 +14,7 @@ def get_repositories(org, phrase=None):
     g = github.Github()
     user = g.get_organization(org)
     for repo in user.get_repos():
-        if phrase is not None and phrase in repo.name.lower():
+        if phrase is not None and phrase.lower() in repo.name.lower():
             temp_dic = {"Name": repo.name, "Owner": repo.owner.login, "URL": repo.url, "Creation Time": repo.created_at,
                         "Number of stars": repo.stargazers_count}
         elif phrase is None:
