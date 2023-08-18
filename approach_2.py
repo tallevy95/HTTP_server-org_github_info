@@ -35,23 +35,16 @@ def get_repositories():
         phrase = None
 
     if response.status_code == 200:
-        # page = int(request.args.get('page', 1))
-        # per_page = int(request.args.get('per_page', 100))  # Number of repositories per page
-        # print(per_page)
-        # start_idx = (page - 1) * per_page
-        # end_idx = start_idx + per_page
-
         repos = response.json()
         matching_repos = []
         for repo in repos:
-            if phrase is not None and phrase in repo["name"].lower():
+            if phrase is not None and phrase.lower() in repo["name"].lower():
                 temp_dic = get_data(repo)
-            elif phrase is None:
+            elif phrase is None:    # for the case that all repositories shuold be appear
                 temp_dic = get_data(repo)
             else:   # for the case that we have phrase but don't need to show it
                 continue
             matching_repos.append(temp_dic)
-        # repos_to_return = matching_repos[start_idx:end_idx]
         formatted_json = json.dumps(matching_repos, indent=4)  # Format the JSON with indentation
         data = app.response_class(
             response=formatted_json,        # the json formatted data
