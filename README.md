@@ -17,6 +17,10 @@ Description:
 	- Creation time
 	- Number of stars
 
+ Given an organization name and a phrase, return a list containing the organization's
+visible repositories that match the provided phrase. If no phrase is provided, the
+endpoint should return the unfiltered list.
+
 Installation:
 	
 	1. Clone the repository: git clone https://github.com/tallevy95/HTTP_server-organization_github_info.git
