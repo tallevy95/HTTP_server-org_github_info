@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 # --------- GLOBALS ---------
 ORG_NAME = sys.argv[1]  # GitHub organization name
-# ORG_NAME = "gofireflyio"
 URL = "https://api.github.com/orgs/%s/repos?page=%d"  # When %s will be the organization name
 
 
