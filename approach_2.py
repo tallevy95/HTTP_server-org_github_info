@@ -32,7 +32,7 @@ def pagination_handler(repos, phrase):
     matching_repos = []
 
     for repo in repos:
-        if phrase is not None and phrase in repo["name"].lower():
+        if phrase is not None and phrase.lower() in repo["name"].lower():
             temp_dic = get_data(repo)
         elif phrase is None:
             temp_dic = get_data(repo)
