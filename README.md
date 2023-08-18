@@ -10,8 +10,8 @@ Description:
 	- approach_1.py will generate a data.csv file containing the requested information (more on this later).
 	- approach_2.py will generate a HTTP server using Flask that contains the requested information (more on this later).
 
- 	** approach_1.py is an alternative approach for getting the requested inforamtion
-  	   but approach_2.py is the primary approach for the assignment.
+ 	** approach_1.py is an alternative approach for getting the requested inforamtion,
+  	   but approach_2.py is the **primary** approach for the assignment.
 
 	The requested information:
 	- Name
