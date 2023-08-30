@@ -23,7 +23,7 @@ Description:
 Installation:
 	
 	1. Clone the repository: git clone https://github.com/tallevy95/HTTP_server-org_github_info.git
-	2. Change the directory: cd HTTP_server-organization_github_info
+	2. Change the directory: cd HTTP_server-org_github_info
 	3. Install dependencies: pip install -r requirements.txt
 	4. Run the project: python main.py
 	   * <Organization> is a must (i.e: gofireflyio, aws, microsoft, etc.)
