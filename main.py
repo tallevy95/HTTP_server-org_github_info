@@ -1,13 +1,10 @@
-import sys
-from flask import Flask, json, request
+from flask import Flask, json
 import requests
 
 app = Flask(__name__)
 
 # --------- GLOBALS ---------
-ORG_NAME = sys.argv[1]  # GitHub organization name
-URL = "https://api.github.com/orgs/%s/repos?page=%d"  # When %s will be the organization name
-
+URL = "https://api.github.com/orgs/%s/repos?page=1"  # When %s will be the organization name
 
 # --------- functions ---------
 def get_data(repository):
@@ -29,33 +26,18 @@ def pagination_handler(repos, phrase):
     :param phrase: a given phrase
     :return: a list of the requested information
     """
-    matching_repos = []
-
-    for repo in repos:
-        if phrase is not None and phrase.lower() in repo["name"].lower():
-            temp_dic = get_data(repo)
-        elif phrase is None:
-            temp_dic = get_data(repo)
-        else:  # for the case that we have phrase but don't need to show it
-            continue
-        matching_repos.append(temp_dic)
+    if phrase is None:
+        matching_repos = [get_data(repo) for repo in repos]
+    else:
+        matching_repos = [get_data(repo) for repo in repos if phrase.lower() in repo["name"].lower()]
     return matching_repos
 
 
-@app.route("/")
-def get_repositories():
-    try:
-        if len(sys.argv[2]) >= 3:
-            phrase = sys.argv[2]
-        else:
-            phrase = None   # if the given phrase is less than 3 letters so show all
-    except:
-        phrase = None
-
-    page = int(request.args.get("page", 1))  # Get the page number from query parameter, default to 1
-    url = URL % (ORG_NAME, page)
+@app.route("/org/<organization>/<phrase>")
+@app.route("/org/<organization>")
+def get_repositories(organization, phrase=None):
+    url = URL % organization    # set the organization name
     response = requests.get(url)
-
     if response.status_code == 200:
         all_repos = []  # To store repositories from all pages
         while response.status_code == 200:  # Continue while there are more pages
@@ -75,7 +57,7 @@ def get_repositories():
         data = app.response_class(
             response=formatted_json,        # the json formatted data
             status=200,                     # OK
-            mimetype='application/json'     # make the data easier to read
+            mimetype='application/json'     # JSON response
         )
         return data
     else:
